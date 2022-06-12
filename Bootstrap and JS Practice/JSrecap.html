@@ -41,6 +41,11 @@
             console.log(conf);
         }) 
         
+        //call back functions
+        setTimeout(() => {
+            console.log("even if im wriiten first but im finally execeuted after the given time")
+        }, 4000);
+        console.log("meanwhile im getting executed");
         
     </script>
 </head>
