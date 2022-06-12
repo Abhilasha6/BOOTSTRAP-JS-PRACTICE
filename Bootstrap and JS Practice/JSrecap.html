@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,16 +8,45 @@
     <title>JAVASCRIPT</title>
     <script>
         // variable creation
-        let x=50;
+        let x = 50;
         console.log(x);
-        var y="this is another way to intitialise a variable";
+        var y = "this is another way to intitialise a variable";
         console.log(y);
-        const z=90; //it means the value of the variable is constant & cant be changed
+        const z = 90; //it means the value of the variable is constant & cant be changed
         console.log(z);
 
+        //functions
+        function disp() {
+            console.log("hello");
+        }
+
+        //object of a function
+        let obja = {
+            p: 30,
+            q: "hello",
+            // we can access the objects p & q of type a by doing below in console
+            // console.log(a.p),
+            // console.log(a.q)
+
+            func: function myFunc(number) {
+                console.log("the number is " + number);
+            }
+        }
+
+        //event handlers
+        document.addEventListener("click", function click() {
+            console.log("clicked");
+            alert("its clicked");
+            let conf = confirm("Are you sure?")
+            console.log(conf);
+        }) 
+        
+        
     </script>
 </head>
+
 <body>
-    This is javascipt recap.
+    <h1>This is javascipt recap.</h1>
 </body>
+
 </html>
