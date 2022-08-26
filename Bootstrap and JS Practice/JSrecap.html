@@ -15,9 +15,6 @@
         const z = 90; //it means the value of the variable is constant & cant be changed
         console.log(z);
 
-        //output
-        
-
         //functions
         function disp() {
             console.log("hello");
@@ -55,6 +52,18 @@
 
 <body>
     <h1>This is javascipt recap.</h1>
+
+    <!-- output ways -->
+
+    <button onclick="console.log('Button is clicked')">Click button</button> 
+    <!-- writing output in console -->
+    <button onclick="alert('alert for button clicked')">Alert Button</button>
+    <!--output using alert message-->
+    <button onclick="document.write('Write this after button is clicked')">Document write button</button>
+    <!-- output to browser screen using document.write -->
+    <button onclick="document.getElementById('para').innerHTML='inner html button clicked' ">innerHTML button</button>
+    <!-- writing ouput to elements as html using getElementById -->
+    <p id="para">this paragraph will change after innerHTML button is clicked</p>
 </body>
 
 </html>
