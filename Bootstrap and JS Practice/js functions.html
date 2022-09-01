@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>JS FUNCTIONS</p>
+</body>
+<script>
+    // passing & returning values in a function
+    function greeting(name, city) {
+        console.log("I am "+name+"/n");
+        console.log("my city is "+city);
+        var mycity = " here at "+ city;
+        return mycity;
+    }
+    var greetingcity = greeting("zintu", "bbsr");
+    console.log("the greeters city is: "+greetingcity);
+
+    //Anonymous functions: defined directly in the parameter sets when you call other functions, and thus you do not need formal definitions.
+    function docalc(num1, num2, addFunc) {
+        console.log(addFunc(num1, num2));
+    }
+    function addFunc(n1, n2) {
+        return n1+n2;
+    }
+    docalc(5,10, addFunc);
+
+    //using an anonymous function directly
+    // A function passed in as a parameter and called from inside is known as a callback function. A big advantage of using a callback function is that the initial function does not need to know anything about the function that will be executed, so you have more flexibility.
+    console.log(docalc(5,10, function(n1, n2){
+        return n1+n2;
+    }))
+</script>
+</html>
