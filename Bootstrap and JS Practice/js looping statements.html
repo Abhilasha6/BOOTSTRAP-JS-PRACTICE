@@ -28,5 +28,20 @@
     for(j=5; j<10; j++){
         console.log(j);
     }
+    console.log("executing for/in loops");
+    var days=[ "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+    for(var i in days){
+        console.log("its "+days[i]+"<br>");
+    }
+
+    console.log("executing interrupting loops");
+    for(var idx in days){
+        if(days[idx]=="Fri")
+        break;
+        else if(days[idx]=="Tue")
+        continue;
+        else
+        console.log(days[idx]);
+    }
 </script>
 </html>
