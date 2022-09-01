@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>objects</p>
+</body>
+<script>
+    //defining an custom defined object directly
+    var obj = {
+        name: "zintu",
+        age: 19,
+        objName: function() {
+            return this.name;
+        }
+    };
+    console.log(obj.objName());
+    console.log(obj);
+
+    //defining custom defined objects
+    console.log("defining custom obj");
+    var user= new Object();
+        user.first="zintu";
+        user.last="sarangi";
+        user.getName = function(){ return this.first +" "+this.last;}
+        console.log(user.getName());
+
+    //using props = property
+    // var s=myObj.name;
+    // myObj.name="new name";
+    // myObj.getName = function(){return this.name;};
+    var propName="User Name";
+    var val1=obj[propName];
+    var val2=obj["Other name"];
+    console.log("using props for objects");
+    console.log(val1);
+    console.log(val2);
+    
+    //using a prototyping object pattern
+    function userp(first, last){
+        this.first=first;
+        this.last=last;
+    }
+    userp.prototype = {
+        getfullname: function(){
+            return this.first+" "+this.last;
+        }
+    };
+    var User=new userp(
+        "zintuu", "sarangiii"
+    );
+    console.log(userp.prototype.getfullname);
+</script>
+</html>
