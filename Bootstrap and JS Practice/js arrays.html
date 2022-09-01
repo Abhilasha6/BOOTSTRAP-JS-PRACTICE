@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>array manipulations</p>
+</body>
+<script>
+    //concatination
+    var arr1= [1,2,3];
+    var arr2=["three", "four", "five"];
+    var arr3=arr1+arr2;
+    var arr4=arr1.concat(arr2);
+    console.log("concatination in arrays");
+    console.log(arr3);
+    console.log(arr4);
+
+    //iteration
+    var week=["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+    for(var i=0; i<7;i++){
+        console.log(week[i]);
+    }
+    for(idx in week){
+        console.log(week[idx]);
+    }
+
+    // join method
+    var arr=[10, 11, 12];
+    var ans= arr.join(":");
+    for(idx in arr)
+    console.log(arr[idx]);
+
+    //checking in array
+    function msg(day){
+        if(week.indexOf(day)!=-1)
+        console.log("happy "+day);
+    }
+    msg("sun");
+</script>
+</html>
