@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Error Handling</p>
+</body>
+<script>
+    var err=new Object();
+    err.name="error";
+    err.msg="this is error message";
+
+    var error=new Object();
+    error.message;
+    //try catch block
+    try{
+        var x=abc;
+    }
+    catch{
+        console.log(err.name+" : "+err.msg);
+    }
+
+    //throwing errors
+    function root(y){
+    try{
+        if(y=="") throw{ message:"cant find square root" };
+        if(isNaN(y)) throw{ message:" cant give sqrt of string"};
+        if(y<0) throw{ message: "cant find sqrt of imag no."};
+        return "sqrt = "+Math.sqrt(y);
+    }catch(error)
+    {
+        return error.message;
+    }
+    finally{
+        console.log("its finally printed");
+    }
+}
+
+function val(){
+    console.log(root("hey"));
+    console.log(root(""));
+    console.log(-1);
+    console.log(20);
+}
+
+val();
+</script>
+</html>
